@@ -20,13 +20,13 @@
         }
         @media screen and (min-width:1200px){
             .bg{
-                width:1200px;
                 display:flex;
                 margin:0 auto;
             }
             .bg div{
                 height:60px;
-                width:300px;
+                flex-basis:auto;
+                flex-grow:1;
                 color:white;
                 line-height:60px;
                 text-align:center;
@@ -34,32 +34,34 @@
         }
         @media screen and (min-width:992px) and (max-width:1200px){
             .bg{
-                width:900px;
+                flex-grow:3;
                 display:flex;
                 margin:0 auto;
                 flex-wrap:wrap;
             }
             .bg div{
                 height:60px;
-                width:300px;
+                flex-basis:auto;
+                flex-grow:1;
                 color:white;
                 line-height:60px;
                 text-align:center;
             }
             .bg div:nth-child(1){
-                width:900px;
+                flex-grow:3;
+                flex-basis:100%;
             }
         }
         @media screen and (min-width:768px) and (max-width:992px){
             .bg{
-                width:740px;
                 display:flex;
                 margin:0 auto;
                 flex-wrap:wrap;
             }
             .bg div{
                 height:60px;
-                width:370px;
+                flex-basis:50%;
+                flex-grow:2;
                 color:white;
                 line-height:60px;
                 text-align:center;
@@ -67,14 +69,15 @@
         }
         @media screen and (max-width:768px){
             .bg{
-                width:500px;
                 display:flex;
                 margin:0 auto;
                 flex-wrap:wrap;
+                flex-basis:1;
             }
             .bg div{
                 height:60px;
-                width:500px;
+                flex-basis:100%;
+                flex-grow:1;
                 color:white;
                 line-height:60px;
                 text-align:center;
